@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: www
+#  render:
+#  - tutorials/*.qmd
+
+website:
+  bread-crumbs: false
+
+editor: visual
+
+#format:
+#  html:
+#    page-layout: full 
+#    css: "https://qfcatmsu.github.io/assets/quarto/qfc_styles.css"
+#    toc: true
+#    toc-title: Contents
+#    toc-location: left
+#    fig-align: left
+#    theme: default
+#    fontsize: 15px
+#    number-sections: true
+#    grid: 
+#      body-width: 1000px
+#    include-in-header:
+#      - text: |
+#          <script>mod=true;</script>
+#          <script src="https://qfcatmsu.github.io/assets/quarto/qfc_styles.js">
