@@ -149,9 +149,6 @@ parent.window.onload = function()
 	// allow users to resize images from small to full-size
 	createFlexImages();
 	
-	// number tables with captions
-//	tableNumbering();
-	
 //	equationNumbering();
 	
 	// Create a right-click menu
@@ -458,22 +455,6 @@ function goBackToPrevLocation()
 	window.parent.scrollTo(leftPos, scrollTopPosition);
 	scrollTopPosition = newScrollTopPosition;
 	//return false;	// so the page does not reload (don't ask why!)
-}
-
-function tableNumbering()
-{
-	// find all tables that have a caption in them
-	var tableCaptions = encapObject.querySelectorAll("table caption");
-
-	// add the equation number after the equation
-	for(i=0; i<tableCaptions.length; i++)
-	{
-		if(tableCaptions[i].textContent.trim() != "")
-		{		
-			tableCaptions[i].textContent =  "Table " + (i+1) + ": " + tableCaptions[i].textContent; 
-		}
-	}
-	
 }
 
 /* function has been deprecated by Quarto */
