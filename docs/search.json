@@ -1,0 +1,398 @@
+[
+  {
+    "objectID": "lessons/Info.html",
+    "href": "lessons/Info.html",
+    "title": "Info",
+    "section": "",
+    "text": "rm(list=ls());                        # clear the Environment tab\noptions(show.error.locations = TRUE); # show line numbers on error\nlibrary(package=ggplot2);             # include all GGPlot2 functions\n\n0.1 Issues\n\n0.1.1 Lesson fixes\n\n\n\nTable 1: dsaflksahfl\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\n1\n2\n3\n\n\n4\n5\n6\n\n\n7\n8\n9\n\n\na\nb\nc\n\n\n\n\n\n\n\nExplanation for how to send files\n\nGitHub request 😏🥺 😁\n\nLesson number on title? Match with side?\n\n\n\n\nCol1\n\n\n\n\nsdagadsg\n\n\n\n\n\n0.1.2 Assets\n\nnon-breaking spaces??\ncollapse class lesson list\nmod scripts that have highlighting?\n&lt;done&gt; link to other lessons\n&lt;done&gt; find consistent place to put all GGPlot files\n&lt;done&gt; data files, along with other linked assets, need to be saved in two places (regular folder, docs folder)\n\nthis all seems to work now…\n\n&lt;done&gt; changes between local (main) and github (docs) – best to use URL\n&lt;done&gt; Which module.js gets used?\n\n\n\n\nTable 2: 12\n\n\n\n\n\nCol1\nCol2\nCol3\n\n\n\n\nfgsh\ndfghgfdh\nfdghd\n\n\nfdghdf\nfghfdgh\nghfgdh\n\n\nfdhgfdgh\nfdghfdgh\ndfghdf\n\n\n\n\n\n\n\n&lt;done&gt; Quarto working directory is not the same as R –\n\ncauses problem when you want to link to file in R (e.g., weatherData)\n\n\nsee Table 2\n\n\n0.1.3 Lesson module, editor\n\n&lt;done&gt; codeblockTab in print mode is being edited inline\n&lt;done&gt; print button is gone\n&lt;done&gt; add tab to codeblocks (still needs styling)\n&lt;done&gt; change margin and padding on content\n&lt;done&gt; When a link goes to same page, stop from reloading in website\n\ndone for same file – now change in NavBar\n\n&lt;done&gt; Overflow code lines lost in print mode (code.sourceCode – white-space: pre-wrap)\n&lt;done&gt; more contrast on PDF text?\n&lt;done&gt;Cannot properly add figure #: to editor when adding figures to plot/code\n\ncodeblock – put in div and add single line after (line becomes figure)\n\n&lt;done - hacky &gt;How do you highlight code in a codeblock in Quarto\n\nOr, use my code styling\n\n&lt;done&gt; equations\n&lt;done&gt; Firefox print preview breaks in middle of lines (Edge and Chrome are fine)\n&lt;done&gt; CSS does not indicate if a figure has an ID that starts with “fig-”(why did I want this??)\n\n.fig[id^=“fig-”]\n\n\n@\n\n\n0.1.4 Quarto editor issues\n\n&lt;done&gt; fix script links\n&lt;done&gt; images within lists cannot be made into figures\n\nprobably just need to hack at Quarto editor and js ignores figures in lists\n\n&lt;done&gt; do better check on links within a page – make sure you are not capturing links to pages within the website\n&lt;done&gt; horizontally resize viewer (grid -&gt; body-width: 1000px)\n&lt;done&gt; image change size makes page jump after reload (worse the further you are down the page\n\ndoes not happen in debug mode (race condition…), only happens in FF\n\n&lt;done&gt; create module.js for just Quarto\n&lt;done&gt; periods in header titles will mess up highlighting (because the period in JS means something)\n&lt;done&gt; set css to only change object within the Quarto document\n&lt;done&gt; don’t jump on link if ref object is on page\n&lt;done&gt;fix last position in shortcut menu\n&lt;done&gt;reduce size of font in document\n&lt;done&gt; figure link open in another window… keep to same\n&lt;done – href -&gt; onclick breaks this!&gt; less aggressive mouseover on figures\n&lt;done&gt; resize flexsize in editor (this is challenging…)\n&lt;done&gt; figure coloring in editor\n&lt;done&gt; figure reference put number in (Insert -&gt; Cross Reference)\n&lt;done&gt; highlight line quickly after linking to it\n&lt;done&gt; render changes only for objects within document (not generally)\n&lt;done&gt; render just document with global yml\n&lt;done??&gt;image resizing does not work when you set height or width in Quarto editor\n\n\n\n0.1.5 Put in instructions\n\nWhen YAML changes every page needs to be rerendered\nshortcut to codeblock\nshort to unicode\n\n« »\n\n&lt;put in instructions&gt; create a newline\n\none way: &lt;br&gt;\nanother: nbsp (control-space in Visual)\nanother: \\ in Source\n\ncopy/paste from D2L causes misalignment of 2nd level bullets – and the visual editor will treat it as code when switching from Source to Visual\n\n\n\nfigures under images will not work if there is not blank lines on both sides of the image command in Source\nfigures on codeblocks\nREnder in a project will Render all open QMD in the yml file\n\ndon’t forget to add scripts to the yaml\n\n\n\n\n\n0.2 My Infos\n\nEditing asset files in the working directory will rerender the files in docs\nFilenames starting with “_” and ignored by Quarto (Except for yml)\nNeed to stop Background Jobs before rendering again if you want a webpage to open\nAll file in docs are recreated after rendering\nIf YAML changes, all files need to be rerendered\n\n\n\n0.3 Git/GitHub issues\n\ncreating a new branch inherits everything from current branch\ngit reset HEAD –hard # tracked files\ngit clean -fd # untracked files and directories\n\n\n\n0.4 Testing Equations and tables here…\na",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "Info"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html",
+    "href": "lessons/11-Annotations.html",
+    "title": "11: Annotations",
+    "section": "",
+    "text": "Manually add text, points, and lines to a canvas \nList objects \n\n\n\nThe script for the lesson is here\n\nSave the R file, called lesson11-Annotations.R to the scripts folder inside your RStudio Project\n\n \nThe data for this lesson (Lansing weather in 2016) is here (same as last lesson)\n\nSave the CSV file, called Lansing2016Data.csv to the data folder inside your RStudio Project.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#purpose",
+    "href": "lessons/11-Annotations.html#purpose",
+    "title": "11: Annotations",
+    "section": "",
+    "text": "Manually add text, points, and lines to a canvas \nList objects \n\n\n\nThe script for the lesson is here\n\nSave the R file, called lesson11-Annotations.R to the scripts folder inside your RStudio Project\n\n \nThe data for this lesson (Lansing weather in 2016) is here (same as last lesson)\n\nSave the CSV file, called Lansing2016Data.csv to the data folder inside your RStudio Project.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#styling-elements-of-a-plot",
+    "href": "lessons/11-Annotations.html#styling-elements-of-a-plot",
+    "title": "11: Annotations",
+    "section": "2 Styling elements of a plot",
+    "text": "2 Styling elements of a plot\nLet’s start with the temperature boxes separated by wind direction from the boxplots lesson: \n  ### Part 1: Boxplots ####\n  ### Re-order the directions on the x-axis using factor(s)\n  windDirOrdered = factor(weatherData$windDir,\n                          levels=c(\"North\", \"East\", \"South\", \"West\"));\n  \n  #### A Boxplot ####\n  plot1 = ggplot(data=weatherData) +\n    geom_boxplot(mapping=aes(x=windDirOrdered, y=changeMaxTemp),\n                 na.rm = TRUE) +\n    theme_bw() +\n    labs(title = \"Change in Temperature vs. Wind Direction\",\n         subtitle = \"Lansing, Michigan: 2016\",\n         x = \"Wind Direction\",\n         y = \"Change in Temperature (\\u00B0F)\");\n  plot(plot1);\n\n\n\n\n\n\nFigure 1: A boxplot of temperature by wind direction\n\n\n\n\n2.1 ggpot_build and rendered data\nWe might want to provide more information about the outliers on the plot.  The first thing we need to do is get the outliers from the data.  The way to get the outliers in GGPlot is to use ggplot_build().  ggplot_build() creates a List that contains all the calculated data for the plot.  This is what GGPlot uses in the background to render to the plot.\n  renderedData = ggplot_build(plot1);\nIn the Environment tab you can see that renderedData is Lists within Lists.  The structure is kind of crazy but we do see the outliers for the four temperature boxes:\n\n\n\n\n\n\nFigure 2: The outliers, three Lists deep, inside the ggplot_build data\n\n\n\n\n\n2.2 Navigating Lists in RStudio\nRStudio can help you create the code that extract the outliers List by: \n\nDouble-click on renderedData in the Environment\nIn the Viewer tab, click on renderedData -&gt; data -&gt; [[1]]\nClick on the icon that appears on the right when you hover over outliers\n\n\n\n\n\n\n\nFigure 3: Using RStudio to navigate a List \n\n\n\n \nRStudio puts this code into the Console:\n&gt; renderedData[[\"data\"]][[1]][[\"outliers\"]]\nYou can set that code equal to a variable named outliers and outliers \noutliers = renderedData[[\"data\"]][[1]][[\"outliers\"]]\nOr, equivalently you can use $ in place of [[  ]] for named variables:\noutliers = renderedData$data[[1]]$outliers;\nNote: [[1]] means the first variable in data – this variable is unnamed so it has to be in [[ ]].\n\n\n2.3 Outliers in Environment\noutliers is now a List variable in the Environment tab.\n \nThere are four boxes in our boxplot (Figure 1).  The List outliers has four numeric vectors – each vector represents the boxes in order.  The number of values in each vector in the number of outliers in each box along with the value of the outlier.  So, the first box had no outliers, the fourth had 12.\n\n\n\n▼ outliers:    List of 4\n   $ : num(0)\n   $ : num -28\n   $ : num [1:3] -14 18 17\n   $ : num [1:12] -22 -26 18 -24 20 ...\n\n\nFigure 4: outliers for the four boxes in the Environment",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#annotating-text",
+    "href": "lessons/11-Annotations.html#annotating-text",
+    "title": "11: Annotations",
+    "section": "3 Annotating text",
+    "text": "3 Annotating text\nWe are going to the information from renderedData to manually label the one outlier in the second box (East).  That outlier is at -28 (meaning there was a day in which the easterly winds were associated with a 28 degree drop in temperature).\n \nTo add text to a plot we use the annotate component. The annotate component can be used with the geom subcomponent to manually add text, lines, and other shapes to a plot. \nplot3 = plot1 + \n  annotate(geom=\"text\",   # type of annotation\n           x=1.9,         # x coordinate of annotation\n           y=-28,         # y coordinate of annotation\n           label=\"-28\",   # the annotation\n           color=\"blue\"); # can add style subcomponents\nplot(plot3);\n\n\n\n\n\n\nFigure 5: Adding a text annotation to a plot\n\n\n\n\n3.1 The coordinates in annotate\nWhen you have an axis with categorical values like the wind direction axis, then each objects gets numbered.\n \nSo, the North box is at positionis 1, East is at 2, South is at 3, and West is at 4.  But, you can also put objects in-between the plot. So, y=3.5 would be half-way between South and West.\n \nI did not want to put the label right on top of the point, so I move it over slightly to the left by using x=1.9 (just left of the East box)instead of x=2. \n\n\n3.2 Place multiple values at once\nThe third box, South, has three outliers (-14, 18, 17), and we can add all the outlier values in one annotate by using vectors instead of single values for the subcomponents:\n  #### Part 4: Add multiple text values to the plot ####\n  plot4 = plot1 + \n    annotate(geom=\"text\",  \n             x=c(2.9, 3.1, 2.9),        \n             y=c(-14,18,17),        \n             label=c(-14,18,17),   # could use outliers[[3]] here\n             color=c(\"blue\", \"red\", \"red\"));\n  plot(plot4);\n\n\n\n\n\n\nFigure 6: Adding multiple text objects in one annotate component\n\n\n\n\n\n3.3 Adding outliers from the List \nWe could have directly used the values from the List.  To extract the 3 outliers from the unnamed 3rd vector (representing the third box):\n  thirdBoxOutliers = outliers[[3]];\nThen we can use thirdBoxOutliers instead of manually adding the three values:\n  plot5 = plot1 + \n    annotate(geom=\"text\",  \n             x=c(2.9, 3.1, 2.9),        \n             y=«thirdBoxOutliers»,        \n             label=«thirdBoxOutliers»,   \n             color=c(\"blue\", \"red\", \"red\"));\n  plot(plot5);\nThis code produces a plot that is exactly the same as Figure 6.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#adding-lines-segments-to-a-plot",
+    "href": "lessons/11-Annotations.html#adding-lines-segments-to-a-plot",
+    "title": "11: Annotations",
+    "section": "4 Adding lines (segments) to a plot",
+    "text": "4 Adding lines (segments) to a plot\nWe are going to add the date for the highest outlier on the fourth box (West winds), which is January 28.  There is no easy way to extract the date from the outlier value – I show one way to get the most extreme outlier in Extension: extracting the date of the outliers using code.  We can also just look in the Environment and see that a -26 degree change occurred on Feb 19, which represents the highest outlier in the West box.\n \nWe also use annotate to add a line to a plot.  The geom is “segment” and you need to supply four values, the x and y starting and ending points (x, xend, y, yend).  The segment connect the text to the outlier point:\n  plot7 = plot1 + \n    annotate(geom=\"text\",  \n             x=3,        \n             y=26,  \n             label=\"2-19\",     \n             color=\"red\") +\n    annotate(geom=\"segment\", # create a line\n             x=3.2,          # starts just after the third box\n             xend=3.95,      # ends just before the fourth box\n             y=26,           # starts at 26 (y-direction)\n             yend=26);       # ends at 26 (y-direction)\n  plot(plot7);\nNote: in GGPlot, lines go across the whole plot and are horizontal or vertical, segments are lines that goes between any two points.\n\n\n\nAdding a line to a plot\n\n\n\n4.1 Styling the line and adding an arrow\nYou can style the line with linewidth, linetype, and color just like in geom_line.  You can also add an arrow to the line using the function arrow(). Note: arrow() comes from the package grid, which is already included with the package ggplot2.\n  #### Part 8 Style the line and add an arrow ####\n  plot8 = plot1 + \n    annotate(geom=\"text\",  \n             x=3,        \n             y=26,    \n             label=\"2-19\",   \n             color=\"red\") +\n    annotate(geom=\"segment\",\n             x=3.2, \n             xend=3.95,\n             y=26, \n             yend=26,\n             color = \"red\",\n             linetype=2,\n             linewidth = 0.5,\n             arrow = arrow());\n  plot(plot8);\n\n\n\n\n\n\nFigure 7: Styling the line and adding an arrow",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#adding-a-rectangle-to-the-plot",
+    "href": "lessons/11-Annotations.html#adding-a-rectangle-to-the-plot",
+    "title": "11: Annotations",
+    "section": "5 Adding a rectangle to the plot",
+    "text": "5 Adding a rectangle to the plot\nAdding a rectangle to the plot is very similar to adding a segment except the subcomponents name change slightly.  Instead of x, xend, y, yend, you use xmin, xmax, ymin, ymax:\n  #### Part 9 Adding a box to the plot ####\n  plot9 = plot8 + \n    annotate(geom=\"rect\",   # rectangle\n             xmin = 2.8,    # starting x\n             xmax = 3.2,    # ending x point\n             ymin = 23.5,   # starting y point\n             ymax = 28.5,   # ending y point\n             alpha = 0.2,\n             linetype=2,\n             color = \"red\",\n             fill = \"grey80\");\n  plot(plot9);\n\n\n\n\n\n\nFigure 8: Adding a box to the plot\n\n\n\n\n5.1 Layering objects in GGPlot\nIn GGPlot, the layers are determined by the order.  This means the box in Figure 1 appears in front of the text because the box was laid out after the text, which is part of  plot8.  This is not much of a problem here because the box has an alpha of 0.2, but if you increase alpha you will see the box cover up the text.  The only way to fix this is to redo the plot so that the text component is laid out after the box component.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#adding-points",
+    "href": "lessons/11-Annotations.html#adding-points",
+    "title": "11: Annotations",
+    "section": "6 Adding points",
+    "text": "6 Adding points\nWe can add points to the plot using annotate – it is very similar to adding text:\n  #### Part 10: Adding a point to a plot ####\n  plot10 =  plot1 +\n    annotate(geom=\"point\",\n             x = 2,\n             y = 25,\n             size = 3,\n             color =rgb(red=0, green=.3, blue=.7),\n             fill = rgb(red=1, green=1, blue=0),\n             shape = 24);\n  plot(plot10);\n\n\n\n\n\n\nFigure 9: Adding a point to the plot\n\n\n\n\n6.1 Adding multiple points\nAnd like text, we can add multiple points using vectors.  We are going to manually add 5 points to the plot using one annotate component:\n \nFirst we define the position, size, and color of the 5 points – and save them to vectors:\n  #### Part 11: Adding multiple points to a plot ####\n  ### data for 5 points\n  xVector = c(1, 1.3, 1.6, 1.9, 2.2);\n  yVector = c(15, 17, 19, 21, 23);\n  pointSize = c(5,4,3,2,1);\n  pointFill = c(\"yellow\", \"orange\", \"red\", \"green\", \"pink\");\nThen use the vectors above to populate the subcomponents of annotate:\n  plot11 =  plot1 +\n    annotate(geom=\"point\",\n             x = xVector,\n             y = yVector,\n             size = pointSize,\n             color =rgb(red=0, green=.3, blue=.7),  # same for all points\n             fill = pointFill,\n             shape = 24);                           # same for all points\n  plot(plot11);\n\n\n\n\n\n\nFigure 10: Adding multiple points to a plot\n\n\n\n\n\n6.2 Creating a scatterplot\nYou could even recreate a complete scatterplot using annotate and geom=“point”.\n  plot12 = ggplot() + # creating a canvas without a data frame\n    theme_bw() +\n    annotate(geom=\"point\",\n             x = weatherData$avgTemp,  # adding every point in avgTemp\n             y = weatherData$relHum,   # ... and relHum\n             size = 3,\n             color = \"blue\",\n             fill = \"red\",\n             shape = 21) + \n    labs(title=\"Scatterplot using annotate\",\n         x = \"Average Temperature\",\n         y = \"Relative Humidity\");\n  plot(plot12);\n\n\n\n\n\n\nFigure 11: A scatterplot using annotate to add all the points",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#polygons",
+    "href": "lessons/11-Annotations.html#polygons",
+    "title": "11: Annotations",
+    "section": "7 Polygons",
+    "text": "7 Polygons\nYou can also use points to create a polygon using geom=“polygon”.  The number of sides for the polygon is the number of points given in x and y plus 1. \n  #### Part 13: Polygons ####\n  plot13 = plot12 +\n      annotate(geom=\"polygon\",  # connects all the points\n           «x = c(60,55,30,35),  # 4 points -- 5 sided polygon»\n           «y = c(60,50,40,80),»\n           color = \"blue\",\n           fill = \"green\",\n           linetype = 4,\n           alpha = 0.4);\n  plot(plot13);\nA polygon will connect all the x,y values and create a final connection back to the original x,y values – in this case, 60,60. \n\n\n\n\n\n\nFigure 12: Adding a polygon to the plot",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#add-horizontal-and-vertical-lines",
+    "href": "lessons/11-Annotations.html#add-horizontal-and-vertical-lines",
+    "title": "11: Annotations",
+    "section": "8 Add horizontal and vertical lines",
+    "text": "8 Add horizontal and vertical lines\nWe can use annotate with geom=“segment” to add any line to a plot.  But, there is an easier way if you just want to add a vertical or horizontal line that goes all the way across the plot.  For that, we use the geom_vline and geom_hline components.\n \nFirst, let’s get the mean average temperature and mean relative humidity:\n  meanTemp = mean(weatherData$avgTemp);\n  meanHum = mean(weatherData$relHum);\nThe values are:\nmeanTemp: 50.6584...\nmeanHum: 68.7704...\nNow, let’s create a horizontal line that represents the mean temperature and a vertical line that represents the mean humidity.\n \nIn this case the mappings are xintercept (for the vertical line) and yintercept (for the horizontal line)\n  plot14 = plot12 +\n    geom_vline(mapping=aes(xintercept = meanTemp),\n               color = \"orange\",\n               linewidth = 2) +\n    geom_hline(mapping=aes(yintercept = meanHum),\n               color=\"purple\",\n               linewidth=2);\n  plot(plot14);\n\n\n\n\n\n\nFigure 13: Adding a horizontal and vertical line to the plot\n\n\n\n \nYou can also add horizontal and vertical lines using annotate in Extension: Add horizontal and vertical lines using annotate – but it is a bit buggy.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#adding-circles-and-ellipses",
+    "href": "lessons/11-Annotations.html#adding-circles-and-ellipses",
+    "title": "11: Annotations",
+    "section": "9 Adding circles and ellipses",
+    "text": "9 Adding circles and ellipses\nNeither annotate nor GGPlot provides a convenient way to add circles and ellipses to a plot – we will use the ggforce package to do this.  ggforce adds two new plot components geom_circleand geom_ellipse.  Both components use subcomponents that are similar to the subcomponents used in other ggplot plotting components.\n  #### Part 15: Add a simple circle ####\n  ## The circle is skewed because the plot axes are not the same scale\n  plot14 = plot12 +\n     # coord_fixed() +  # sets axes to same scale so circle is visually a circle\n       geom_circle(mapping=aes(x0 = 50, y0 = 50, r = 10),\n                 alpha=0.2,   \n                 color = \"blue\",\n                 fill = \"green\",\n                 linewidth=3,\n                 linetype=3);\n  plot(plot15);\nThe main difference in setup between geom_circle and other plotting components is that you need to map three value: x0, y0, and r.  x0 and y0 represent the circle’s center and r represents the radius.\n \nAxes often have different scales that will skew the circle.  If you want to visually maintain the circle then you need to rescale the axes – this is done using coord_fixed(), which is commented out in my code.\n\n\n\n\n\n\nFigure 14: Adding a circle to the plot\n\n\n\n\n9.1 Ellipse\ngeom_ellipse is similar to geom_circle except that you need more values to define an ellipse.  The mapped values are:\n\nx0, y0: center point of the ellipse\na, b: the two radii of the ellipse\nangle: spins the ellipse \n\n  plot16 = plot12 + \n    geom_ellipse(mapping=aes(x0 = 50, y0 = 50, a = 20, b=10, angle=-90),\n                 alpha=0.2,   \n                 color = \"blue\",\n                 fill = \"green\",\n                 linewidth=3,\n                 linetype=3);\n  plot(plot16);\n\n\n\n\n\n\nFigure 15: Adding an ellipse to a plot",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#application",
+    "href": "lessons/11-Annotations.html#application",
+    "title": "11: Annotations",
+    "section": "10 Application",
+    "text": "10 Application\nCreate a script file in your Project’s scripts folder called app11.r and, using the data from Lansing2016NOAA.csv:\n1) Using the plot from Figure 1:\n\nUsing annotate, add three outlier points to the East box (two above and one below).\nChange the color, shape, and size of the points\nLabels the points with their value\nPut black boxes behind the labels\n\n2) Using annotate create a scatterplot of just the first 100 values of relative humidity vs. average temperature:\n\nCreate a 5-point polygon that covers all temperature points less than or equal to 20 degrees (shown circled in red in image below)\n\nthe image is just showing you which points to cover – you are not trying to replicate the shape in the image!\n\nAdd a horizontal and vertical lines that represent the median temperature and median humidity for the 100 values\nCreate an ellipse that covers the 9 points circled in grey below\n\n\n\n\n\n\n\nFigure 16: Polygon and ellipse for question 2 in the application\n\n\n\n3) Using annotate, create a plot of\n\nUse geom = “line”\ncreate 1000 points on the x-axis (i.e, a sequence from 1 to 1000) )\ncreate 1000 points on the y-axis (i.e, a sequence from sqrt(1 to 1000) )\nadd an arrow to the end of the curve\n\n\n10.1 Questions\nAnswer the following in comments inside your application script:\n\nWhat was your level of comfort with the lesson/application?\nWhat areas of the lesson/application confused or still confuses you?\nWhat are some things you would like to know more about that is related to, but not covered in, this lesson?",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#extension-extracting-the-date-of-the-outliers-using-code",
+    "href": "lessons/11-Annotations.html#extension-extracting-the-date-of-the-outliers-using-code",
+    "title": "11: Annotations",
+    "section": "11 Extension: extracting the date of the outliers using code",
+    "text": "11 Extension: extracting the date of the outliers using code\nThe code is beyond the scope of this class and finding other outlier values gets even trickier… \n  # Get the index of all days with west winds\n  «westWindDays» = which(weatherData$windDir == \"West\"); \n  \n  # find the maximum change in temperature on days with west winds\n  «maxTempChange» = max(weatherData$changeMaxTemp[«westWindDays»],\n                      na.rm = TRUE);  # need to remove NA values\n  \n  # find the index of the the day that had the max value (28)\n  «dayMaxChange» = which.max(weatherData$changeMaxTemp[«westWindDays»]);\n  \n  # Get the date from the index (2-19)\n  date = weatherData$date[westWindDays[dayMaxChange]];",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/11-Annotations.html#extension-add-horizontal-and-vertical-lines-using-annotate",
+    "href": "lessons/11-Annotations.html#extension-add-horizontal-and-vertical-lines-using-annotate",
+    "title": "11: Annotations",
+    "section": "12 Extension: Add horizontal and vertical lines using annotate",
+    "text": "12 Extension: Add horizontal and vertical lines using annotate\nWhen we used geom_hline and geom_vline to create line, we put the information needed for the line (xintercept and yintercept) inside the mapping.  This is inconsistent with what mapping is intended for because we are hardcoding, not mapping, the value from the data.  There is a more conceptually consistent way to plot horizontal and vertical lines using annotate but there is a bug:\n  ##### Part 14b: Using annotate for vertical and horizontal lines (buggy) ####\n  plot14b = plot12 +\n    annotate(geom=\"vline\",\n             xintercept = meanTemp,\n             x = meanTemp, # x must be included but is ignored (this is a bug)\n             color = \"orange\",\n             linewidth= 2) +\n    annotate(geom=\"hline\",\n             yintercept = meanHum,\n             y = meanHum,  # y must be included but is ignored (this is a bug)\n             color = \"purple\",\n             linewidth= 2);\n  plot(plot14b);\nThe above code produces the same plot as Figure 13 but uses annotate, which is designed for hardcoded (i.e., non-mapped) values.  The problem is that you need to include the intercept values twice: once for the axis (x, y) and once for the intercept (xintercept, yintercept) – and you will get a warning regarding x and y.  Otherwise, the code works fine.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "11: Annotations"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html",
+    "href": "lessons/00-IntroductionAndSyllabus.html",
+    "title": "00: Introduction and Syllabus",
+    "section": "",
+    "text": "The purpose of this class is to introduce students to the graphing package in R called GGPlot2 and the modularization techniques used by GGPlot2 to create plots.  GGPlot2, developed by Hadley Wickham, is a powerful data visualization tool used to make publication-quality plots and it has one of the largest, and most active, R communities.  GGPlot2 differs from other graphing packages by separating a plot into its component parts, making the code for the plot more reusable and extensible.\n\nThis class uses RStudio and is designed for students who have at least a basic background in programming – the equivalent of one semester of R, or any similar programming language (e.g., Visual Basic, JavaScript, C++) and familiarity with R.\n \nGraphing with GGPlot is a self-paced and asynchronous online class. The amount of material in the class is about the same as a 1.5 credit, one semester class and students are expected to complete the class within three months.  There are no regularly scheduled office hours but you can email the instructor anytime to ask questions or set up a Zoom meeting.  All contacts will receive a response within one business day.\n\n\nCharlie Belinsky\n\nbelinsky@msu.edu\n517-355-0126\n\n \nAbout me…\nI started my career as a Software Engineer for Motorola in Arizona where I developed software for military radios. From there I became a high school teacher in Port Huron, MI where I taught Computer Science, Web Design, and Physical Science. After that, I worked as an Instructional Designer for the College of Education at MSU where my main project was developing the hybrid graduate program. I currently work at the QFC where my primary job is developing and teaching online classes, including this one.  In my free time you will often find me with a backpack deep in a forest or, as my picture testifies to, hanging out on a mountain in the Northern Cascades.\n\n\n\n\nYou can contact me, Charlie, regarding technical issues.\n \nMSU also offers 24 hour technical support for MSU and MSU Guest students.\n\n517-432-6200 or 844-678-6200 (toll free)\nemail: ithelp@msu.edu\nYou can get an MSU Guest ID here.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#welcome-to-graphing-with-ggplot",
+    "href": "lessons/00-IntroductionAndSyllabus.html#welcome-to-graphing-with-ggplot",
+    "title": "00: Introduction and Syllabus",
+    "section": "",
+    "text": "The purpose of this class is to introduce students to the graphing package in R called GGPlot2 and the modularization techniques used by GGPlot2 to create plots.  GGPlot2, developed by Hadley Wickham, is a powerful data visualization tool used to make publication-quality plots and it has one of the largest, and most active, R communities.  GGPlot2 differs from other graphing packages by separating a plot into its component parts, making the code for the plot more reusable and extensible.\n\nThis class uses RStudio and is designed for students who have at least a basic background in programming – the equivalent of one semester of R, or any similar programming language (e.g., Visual Basic, JavaScript, C++) and familiarity with R.\n \nGraphing with GGPlot is a self-paced and asynchronous online class. The amount of material in the class is about the same as a 1.5 credit, one semester class and students are expected to complete the class within three months.  There are no regularly scheduled office hours but you can email the instructor anytime to ask questions or set up a Zoom meeting.  All contacts will receive a response within one business day.\n\n\nCharlie Belinsky\n\nbelinsky@msu.edu\n517-355-0126\n\n \nAbout me…\nI started my career as a Software Engineer for Motorola in Arizona where I developed software for military radios. From there I became a high school teacher in Port Huron, MI where I taught Computer Science, Web Design, and Physical Science. After that, I worked as an Instructional Designer for the College of Education at MSU where my main project was developing the hybrid graduate program. I currently work at the QFC where my primary job is developing and teaching online classes, including this one.  In my free time you will often find me with a backpack deep in a forest or, as my picture testifies to, hanging out on a mountain in the Northern Cascades.\n\n\n\n\nYou can contact me, Charlie, regarding technical issues.\n \nMSU also offers 24 hour technical support for MSU and MSU Guest students.\n\n517-432-6200 or 844-678-6200 (toll free)\nemail: ithelp@msu.edu\nYou can get an MSU Guest ID here.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#class-requirements",
+    "href": "lessons/00-IntroductionAndSyllabus.html#class-requirements",
+    "title": "00: Introduction and Syllabus",
+    "section": "2 Class Requirements",
+    "text": "2 Class Requirements\nStudents should be familiar with basic programming structures covered in a typical first semester programming class: if…else, for(), and functions.  All material for this course is online – no textbooks are required.\n\n2.1 Tech requirements\nHardware:  Any Windows (10 or 11), Mac, or Linux machine from the past ten years that has updates installed can handle all hardware and software requirements of this class.\n \nBrowser: You can use any browser (Firefox, Microsoft’s Edge, Chrome, Safari) updated within the last couple of years.\n \nVideoconferencing: We use Zoom for our videoconference meetings.  The meeting link will be emailed to you prior to the meeting.  It is recommended that you download and test your camera and microphone on Zoom before attending an instructor meeting.  The easiest way to do this is to go to the Zoom test page.  Note: Zoom’s test page will download Zoom for you.\n \nTo test your hardware in Zoom, open Zoom and make sure you are on the Home tab and click the Settings Icon (Figure 1) and the Settings Window will open Figure 1.  Go to the Audio and Video tabs to test your microphone, speakers, and webcam.  If you are using a Mac, the view is different but the buttons are the same.\n\n\n\n\n\n\nFigure 1: Testing the audio and video in Zoom (click on picture to resize).\n\n\n\n\n\n2.2 Accessing the class\nYou need a GitHub ID to access the class and hand in assignments. Go to http://github.com and click Sign up, you can use a free GitHub account or a professional account.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#class-structure",
+    "href": "lessons/00-IntroductionAndSyllabus.html#class-structure",
+    "title": "00: Introduction and Syllabus",
+    "section": "3 Class Structure",
+    "text": "3 Class Structure\nThe course has 12 lessons:\n\nRStudio Projects and GGPlot Setup: Set up software and the programming environment for the class, go over the programming environment\nComponents: Getting data from a CSV file, scatterplots, breaking down GGPlot components\nMapping and Aesthetics: code spacing, mapping data to different aspects of a plot (size, color, shape), adding legends\nElements and Styles: modifying plot and canvas components, RGB colors and Unicode\nDate Objects and Theming: proper formatting and converting of Date objects, creating your own GGPlot theme\nModifying Mapped Elements: changing the properties of data elements on a plot, color gradients\nFaceting: break up plot data horizontally and vertically\nBoxplot: mapping data to a boxplot, faceting boxplots, outliers\nReshaping and For Loops 1: two different methods for mapping data from a complex data frame\nReshaping and For Loops 2: methods for plotting subset data within a data frame, text plots\nAnnotations: adding non-data elements to your plot (e.g., text, points, lines)\nMultipaneling: arranging and customizing plots on a canvas, regular expression\n\n\n3.1 Lesson Application\nAll lessons have an Application section at the end that will ask you to apply what you learned in the lesson in your own script. The Application is the only product that gets evaluated. There are no tests and there is no final exam. \n\n\n3.2 Lesson feedback\nEach application has these three questions regarding the lesson:\n\nWhat was your level of comfort with the lesson/application?\nWhat areas of the lesson/application confused or still confuses you?\nWhat are some things you would like to know more about that is related to, but not covered in, this lesson?\n\n \nThese questions are vital for feedback in this class and far more useful to me than end-of-class surveys as they give me real-time information.  Please take a few minutes to answer these questions.  Feedback from these questions has become my main way of improving the class.  In return, I promise to address concerns and questions from your responses.\n\n\n3.3 Extensions and Traps\nMany of the lessons contain optional content called Extension and Traps.  Extensions contain material that goes beyond the lesson’s objectives and Traps capture some of the common issues students have with the lesson’s objectives.  There are links to Extensions and Traps within the Content area of the lesson.  Clicking on the appropriate link takes you directly to the Extension or Trap. Extension: Testing the extension link",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#student-instructor-meetings",
+    "href": "lessons/00-IntroductionAndSyllabus.html#student-instructor-meetings",
+    "title": "00: Introduction and Syllabus",
+    "section": "4 Student-Instructor Meetings",
+    "text": "4 Student-Instructor Meetings\nStudent-instructor meetings will be done on an as-needed basis and meetings can always be requested by the student.  Meetings are preferably over Zoom so that screens can be shared.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#lesson-features-technical",
+    "href": "lessons/00-IntroductionAndSyllabus.html#lesson-features-technical",
+    "title": "00: Introduction and Syllabus",
+    "section": "5 Lesson features (technical)",
+    "text": "5 Lesson features (technical)\nThis sections goes over some of the technological features built into the lessons.\n\n5.1 Long-click menu\nIf you long-click (hold left-button for about half a second) anywhere on any lesson page Figure 2, try it!), you are given options to:\n\nGo to Top of Page\nPrint/ Save as PDF (same as the lesson’s Print link)\nReturn to the Previous Position (only appears after you have jumped to a position on the page)\nMaximize All Images\nMinimize All Images\n\n \n\n\n\n\n\n\nFigure 2: The long-click menu – this view is from Firefox .\n\n\n\n\n\n5.2 Resizing Pictures\nMost pictures in the course can be resized so that the picture is out of your way when you don’t need to view it.  Clicking on the picture toggles it between the minimized and maximized states (Figure 3).\n\n\n\n\n\n\nFigure 3: Test picture to toggle (Ninh Bình, Việt Nam)\n\n\n\n\n\n5.3 Figures and references\nWhen you click on a figure reference (e.g., Figure 3), the caption on the figure will highlight for 2 seconds.\n \nIf the figure is not on the screen, then the page will scroll to the figure and highlight it.  For instance, clicking on Figure 1 will take you to the Zoom figure near the top of this page.  You can return to this position by long-clicking and selecting Return to the Previous Position\n\n\n5.4 Printing lessons and saving lessons to PDF\nYou can print any lesson or save it as a PDF by clicking on the Printer icon at the top of every lesson (and this syllabus).  This will bring up a print dialog (Figure 4) and you can print the lesson to a printer.  On most machines, you can also choose a PDF device as a printer – this will save the lesson as a PDF document.\n \nNote: Using your browser’s print feature instead on the Print link will print out the whole webpage instead of just the lesson.\n\n\n\n\n\n\nFigure 4: This author has two print-to-PDF devices – the Microsoft Print to PDF, which comes with Windows 10 and 11, works fine\n\n\n\n\n5.4.1 Print-to-PDF Software\nIf you are using Windows 7 or 8 you might not have a PDF device and you will need to download Print-to-PDF software. You can see if you have a PDF device by going to the print options in any program and see if any of the devices have “PDF” in their name (Figure 4).  If you don’t have a PDF device, then I recommend you install CutePDF (direct link to the file download).  CutePDF is simple and powerful print-to-PDF software that does not try to install any extra software on your computer. Trap: Bloatware\n\n\n\n5.5 Codeblocks\nClicking on the clipboard in the upper-right corner of the codeblock (Figure 5) will copy the code to the clipboard. You can then paste the code into RStudio (or any other text editor)\n\n\n\n# the next two lines should be at the top of all your scripts\nrm(list=ls());\noptions(show.error.locations = TRUE);\n# create three variables: d, t, and v\n# give d and t values and use them to calculate v\nd = 100;\nt = 20;\nv = d/t;\n\n\nFigure 5: Clicking on clipboard in upper-right corner selects all the text and copies it to the clipboard\n\n\n\n\n\n5.6 Special note about images in the lessons for this class\nRStudio is a rapidly evolving program, and it would be too much work to maintain all the lesson images in order to reflect the visual likeness of the newest version of RStudio.  Some of the images in this class still reflect the 2019 version of RStudio (when R was still at version 3.5). There are also minor changes that I have made to the code that I did not believe warrants putting in new images.  For instance, my RStudio Project name might change between images and some of the RStudio buttons and tabs will look slightly different (think of it as a check on how observant you are!).  I have tried to make sure these differences change nothing functionally.  Inevitably, something will fall through the cracks – so please, contact the instructor if there is something causing a problem!",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#personal-statement-from-charlie",
+    "href": "lessons/00-IntroductionAndSyllabus.html#personal-statement-from-charlie",
+    "title": "00: Introduction and Syllabus",
+    "section": "6 Personal statement from Charlie",
+    "text": "6 Personal statement from Charlie\nThe biggest thing that is lost when you move a class from a face-to-face environment to an online environment is the daily interaction between the instructor and the students.  These interactions provide invaluable informal feedback for the instructor and, I would argue, are the main tool that an instructor uses to make improvements to their class.  It is impossible to replicate this in an online class but I ask that you help me out and make an effort to communicate to me the little things.  This could mean technical nags like content not appearing properly or pages loading too slowly, lesson content that is unclear, grammar and spelling issues, or scripts that does not work or work in a way that you do not understand.\n \nThank you for reading and taking this into consideration.  In the end, it is the interactions between an instructor and the students that make a class great.\n \nNow on to the stuff I have to put in a syllabus…",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#disclaimers-and-loose-ends",
+    "href": "lessons/00-IntroductionAndSyllabus.html#disclaimers-and-loose-ends",
+    "title": "00: Introduction and Syllabus",
+    "section": "7 Disclaimers and Loose Ends",
+    "text": "7 Disclaimers and Loose Ends\n\n7.1 Student Responsibilities\n\nStudents are expected to regularly check the Announcements section on the home page for the class and the email address associated with their MSU ID/ MSU Community ID for new information regarding the class.\nStudents are expected to ask questions if they are having problems with an application or their class project.\nStudents are expected to monitor their progress in order to complete the course work on time.\nStudents are expected to contact either the instructor or MSU regarding technical issues that are interfering with the class.\nStudents are expected to follow the MSU’s academic integrity policy.\nPlease notify the instructor regarding issues with the class website and lessons.\n\n\n\n7.2 Academic Integrity (summarized)\nWritten or other work which a student submits in a course, shall be the product of his/her own efforts. Plagiarism, cheating, and all other forms of academic dishonesty are prohibited. Students are expected to adhere to the ethical and professional standards associated with their programs and academic courses. All applicable portions of Michigan State’s Policy on Academic Integrity apply to non-credit courses. Copies of the Policy on Academic Integrity may be accessed at https://www.msu.edu/unit/ombud/honestylinks.html.\n\n\n7.3 Instructor Responsibilities\n\nInstructor will be available for assistance for requested virtual office hours (through Zoom).\nInstructor will respond to emails from students within 1 business day.  Potential for delayed responses (e.g., instructor is on vacation) will be posted on the front page of the course.\nChanges to the course will be posted in the Announcements section of the home page for the class.\n\n\n\n7.4 Attendance\nYou are expected to log in to the class at least once a week. Logging in allows you to stay updated and see new announcements.\n\n\n7.5 Participation\nPlease note that not all course lessons are the same length and the later ones tend to involve more work. Our goals with regard to participation/progress are to (a) keep you engaged in the course, (b) enhance the overall learning environment by promoting student-teacher communication, and (c) avoid a last minute time crunch for everyone involved. We will not be sympathetic or make allowances for your failure on course tasks or deadlines that result from not seeing announcements because you had not accessed the course for an extended period, and had not told us you would be away from the internet.\n\n\n7.6 ADA Statement\n\nMSU provides students with disabilities reasonable accommodations to participate in educational programs, activities, or services. Students with disabilities requiring accommodations to participate in class activities or meet course requirements should contact the instructor as early as possible.\nFor students needing accommodations for disabilities, please contact your instructor and The Resource Center for Persons with Disabilities at Michigan State University at 517-353-9642.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#trap-bloatware",
+    "href": "lessons/00-IntroductionAndSyllabus.html#trap-bloatware",
+    "title": "00: Introduction and Syllabus",
+    "section": "8 Trap: Bloatware",
+    "text": "8 Trap: Bloatware\nAdobe Acrobat, like most free software you download, attempts to bundle itself with software you most likely do not need nor want (i.e., bloatware).  Make sure you take some time to read the optional offers whenever you download software. This author would argue that the main reason computers “slow” down over time is because of extra software that users unwittingly install.\n \n\n\n\n\n\n\nFigure 6: Three offers from Adobe that you neither need nor want – this author recommends you uncheck them all.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/00-IntroductionAndSyllabus.html#extension-testing-the-extension-link",
+    "href": "lessons/00-IntroductionAndSyllabus.html#extension-testing-the-extension-link",
+    "title": "00: Introduction and Syllabus",
+    "section": "9 Extension: Testing the extension link",
+    "text": "9 Extension: Testing the extension link\nHi, and welcome to the test Extension.  If you clicked on the Extension link to get here then you can return to your previous location by long-clicking on this page and choosing Go to Previous Location.\n \nIf you just scrolled down to this point then, congratulations, you have reached the end of the document.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "00: Introduction and Syllabus"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html",
+    "href": "lessons/09-ReshapingAndForLoops1.html",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "",
+    "text": "include an explanation for why ggplot with for loops are easier to debug than ggplots with melted dataframes",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#purpose",
+    "href": "lessons/09-ReshapingAndForLoops1.html#purpose",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "1 Purpose",
+    "text": "1 Purpose\nPlot multiple columns in a data frame using:\n\nreshaped data frames\nfor loops\nforcing local evaluation\n\n\n1.1 Code for the lesson\nThe script for the lesson is here\n\nSave the R file, called lesson09-ReshapingAndForLoops1.R to the scripts folder inside your RStudio Project\n\n \nThe data for this lesson (January Lansing temperatures from 2016-2022) is here\n\nSave the CSV file, called Jan_TAVG.csv to the data folder inside your RStudio Project.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#a-temperature-matrix",
+    "href": "lessons/09-ReshapingAndForLoops1.html#a-temperature-matrix",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "2 A temperature matrix",
+    "text": "2 A temperature matrix\nTo start this lesson, we are going to use a new dataset inside the data folder named Jan_TAVG.csv.\n  Jan_Avg = read.csv(file = \"data/Jan_TAVG.csv\");\nJan_TAVG.csv has the average temperature for all 31 days in January in the seven years from 2016 to 2022 (31 rows by 7 columns).  The data comes from NOAA/NCDC.\n\n2.1 Importing the data\nJan_TAVG.csv has the years in a header row as numbers in strings (e.g., “2016”, “2017”).\n\n\n\n\n\n\nFigure 1: The CSV file, Jan_TAVG.csv with years in the header row\n\n\n\n \nWhen you read data in using read.csv, the data is put into a data frame.  An “X” is added to the years in the column names  (i.e., the header row) because column names are technically variable names and variable names cannot start with a number, so R add an “X” to make the variable name valid.  Note: R allows invalid variable names as column names for data frame, but you should avoid this.\n \n\n\n\n\n\n\nFigure 2: The Jan_Avg data frame – with an “X” added to the years in the header row",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#plotting-multiple-columns-as-one",
+    "href": "lessons/09-ReshapingAndForLoops1.html#plotting-multiple-columns-as-one",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "3 Plotting multiple columns as one",
+    "text": "3 Plotting multiple columns as one\nOur goal is to create a line plot for each column in the Jan_Avg data frame in Figure 2, which will look like this:\n\n\n\n\n\n\nFigure 3: 7 lines plot, 1 for each column in Jan_Avg\n\n\n\nWe could plot the seven columns individually, but we want a solution that can be extended to any situation (i.e., any number of columns to plot). We are going to look at two distinct ways to handle this situation.\n\nManipulating the data frame to put all the data points (e.g., temperature values) into one column. This is called reshaping the data frame.\nUsing for loops to cycle through all of the columns.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#reshaping-the-data-frame",
+    "href": "lessons/09-ReshapingAndForLoops1.html#reshaping-the-data-frame",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "4 Reshaping the data frame",
+    "text": "4 Reshaping the data frame\nThe generally accepted ggplot solution for plotting multiple columns in a data frame is to reshape the data frame.  I do not like this solution because it involves manipulating the data frame in an unintuitive manor, but it is a widely-used technique you should be familiar with.\n \nThe basic steps are (Figure 4):\n\nMove the data from all the columns you want to plot into one column (in red). In this example, all temperature values from the seven columns go into one column.\nExpand the column names to a new column (in blue). In this example, the columns names are the years.\nExpand the row names to a new column (in green). In this example, the rows names are the date.\n\n\n\n\n\n\n\nFigure 4: The original data frame (31 rows, 7 columns) and the reshaped (melted) data frame (217 rows, 3 columns)\n\n\n\n\n4.1 Comparing original and reshaped data frame\nThe original data frame has 7 columns, representing the seven years of temperature data, each column has 31 rows – so, 217 temperature values in all.\n \nIn the reshaped data frame, we put all 217 temperature values from the seven columns in one column. This is called melting a data frame.  So, the reshaped data frame will have 217 rows.\n \nThe rows and column names of the original data frame (Figure 2) have information about the date (1-31) and year (2016-2022).  We need to maintain the year and date information across every row in the reshaped data frame meaning we need to create a column for the date and the year.\n \nThe reshaped data frame will have 217 rows (31*7) and three columns: temperature, year, and date ( Figure 4 )\n\n\n4.2 Creating the reshaped data frame\nWe can use the reshape() function to create the new data frame.\n \nIn this new data frame we need to \n\ncombine the seven temperature columns into one column\nmaintain the year (original column names) and date (original row names) information in new columns\n\n  Jan_Avg_Melt = reshape(data=Jan_Avg,        # data frame to manipulate\n                    direction=\"long\",         # how to manipulate (long form) \n                    varying=c(1:7),           # columns to combine (melt)\n                    v.name=\"temperatures\",    # name of combined column\n                    times=colnames(Jan_Avg),  # old column names (years)\n                    timevar = \"year\",         # name for new column of years\n                    ids = as.numeric(rownames(Jan_Avg)),  # old row names (dates)\n                    idvar = \"dayNum\",         # name for new column of dates\n                    new.row.names = 1:217);   # renaming rows\nThere are nine arguments used in reshape(), let’s take these arguments two at a time…\n \nWe are reshaping the data frame Jan_Avg in the long direction (called melting):\ndata = Jan_Avg\ndirection=\"long\"\nnote: the other direction is “wide” (often called casting)\n \nWe are combining the temperature values in columns 1 through 7: c(1:7) and the name of the new combined column is temperatures:\nvarying = c(1:7)      # which data columns to combine\nv.name=\"temperatures\" # name of combined column\nWe are creating a new column from the seven column names in the old data frame (X2016, X2017…). The new column assigns a year to each temperature value (i.e., each row) and the new column is named years:\ntimes=colnames(Jan_Avg)   # column names (year) associated with each temp\ntimevar=\"years\"           # combined column name\nWe are also creating a new column from the 31 row names (1 through 31).  The new column assigns a date to each temperature value (i.e., each row) and the new column is named dayNum:\nids = as.numeric(rownames(Jan_Avg))   # row name (day) associated with each temp\nidvar = \"dayNum\"\nI add this argument to change the row names back to row numbers.  The line functionally does nothing but it makes the data frame easier to read in the RStudio viewer tab:\nnew.row.names = 1:217\n\n\n4.3 The reshaped data frame\nIf you open Jan_Avg_Melt (Figure 5) you will see there are 217 rows, representing the 217 daily temperatures.  On the same row as the temperature, there are columns that give the associated day and year.\n \n\nThe year changes every 31 rows so rows 1-31 are X2106, 32-62 are X21017, 63-93 are 2018, etc..\nThe dayNum cycles every 31 rows so the dayNum goes up by 1 each row and resets to 1 on rows 32, 63, 94, 125, 156, and 187.\n\n\n\n\n\n\n\nFigure 5: The reshaped data frame with the year and dayNum in their own column\n\n\n\n\n\n4.4 Plotting the reshaped data frame\nWe can use one geom_line component to plot all seven years in the reshaped data frame.\n \nThe geom_line component maps:\n\nx to the temperature column\ny to the dayNum column \ncolor to the year column\n\nThe color mapping is how we create seven separate line plots – each year is placed in the legend and mapped to a different color.\n  # Plot temperature (y) ~ dayNum (x) and subset by year (color)\n  plot1 = ggplot(data = Jan_Avg_Melt) +\n    geom_line(mapping=aes(x=dayNum, y=temperatures, color=year));\n  plot(plot1);\n\n\n\n\n\n\nFigure 6: The line plots from the reshaped data frame",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#create-plots-using-for-loops",
+    "href": "lessons/09-ReshapingAndForLoops1.html#create-plots-using-for-loops",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "5 Create plots using for loops",
+    "text": "5 Create plots using for loops\nThe main reason I do not like the reshaping method is that it creates a new data frame that is less intuitive than the original.  I believe that the script should be manipulated to meet the needs of the data – not the other way around.  And we have a perfectly good programming technique to cycle through, and plot, columns in a data frame: for loops.\n \nWe can code one for loop with one geom_line that cycled through the seven columns of the original data frame to create the seven plots.\n\n5.1 Manually plotting multiple geom_lines\nWe will start by plotting three of the seven columns in Jan_Avg.  The code is similar to what we have done in previous lessons except the data frame, Jan_Avg, is not set when we initiate the canvas (i.e., not added as data in ggplot()).  Instead, we use the data frame in the mapping of the geoms.  Note: In GGPlot it is easier to use data frames in mapping when using for loops for reasons that would take us down a rabbit hole.\n  plot2 = ggplot() +                «# the data frame is not declared here»\n    geom_line(mapping=aes(x=1:31, \n                          y=«Jan_Avg»$X2016,  # the data frame is used here instead\n                          color=\"2016\")) +\n    geom_line(mapping=aes(x=1:31,  \n                          y=«Jan_Avg»$X2017,\n                          color=\"2017\")) +\n    geom_line(mapping=aes(x=1:31,\n                          y=«Jan_Avg»$X2018,\n                          color=\"2018\")) +\n    theme_bw() + \n    labs(x = \"Date\",\n         y = \"Temp (Celsius)\",\n         color = \"Year\");\n  plot(plot2);\nThere are three mapping for each geom_line:\n\nThe x mapping for each plot is 1 through 31 since we are looking at the dates from January 1st to January 31st\nThe y mapping is to the specific column of temperatures we are plotting, X2016, X2017, X2018 …\nThe color mapping is the year, which is hard coded in this example (a value instead of a variable). \n\nNote: quotes are necessary for year because year needs to be a discrete value (character), not a continuous value (numeric) – there is an application question regarding this\n\n\n\n\n\n\n\n\nFigure 7: Plotting 3 columns one at a time\n\n\n\n\n\n5.2 Generalizing the mappings: use index numbers instead of column names\nOur goal is to create code for one geom_line that can be used in a for loop to create all 7 line plots.  To do this, we need to generalize the code.\n \nIn a for loop, it is easier to index the columns by number instead of name (next lesson we will use names). \n \nInstead of using Jan_Avg$X2016, Jan_Avg$X2017, and Jan_Avg$X2018 as the y mappings, we will use the [x,y] subset notation to subset by column number instead of column name.\n \nWe provide no x value in the [x,y] subset, which means we are taking the values from every row in the column\n  plot3 = ggplot() +\n    geom_line(mapping=aes(x=1:31, \n                          y=«Jan_Avg[,1]»,    # column 1, same as Jan_Avg$X2016\n                          color=\"2016\")) +\n    geom_line(mapping=aes(x=1:31,  \n                          y=«Jan_Avg[,2]»,    # column 2, same as Jan_Avg$X2017\n                          color=\"2017\")) +\n    geom_line(mapping=aes(x=1:31,\n                          y=«Jan_Avg[,3]»,    # column 3, same as Jan_Avg$X2018\n                          color=\"2018\")) +\n    theme_bw() + \n    labs(x = \"Date\",\n         y = \"Temp (Celsius)\",\n         color = \"Year\");\n  plot(plot3);\n\n\n\n\n\n\nFigure 8: plot3 looks exactly like plot2\n\n\n\nYou can put Jan_Avg[,2] in the Console to convince yourself that this is all values in column 2:\n&gt; Jan_Avg[,2]\n [1]  -0.4   0.4   2.5  -4.1 -10.1 -12.8 -12.8 -11.6  -6.8   0.1   2.1   0.7  -5.8\n[14]  -5.1  -4.6  -2.8   1.6   2.7   1.8   1.6   6.8   6.6   4.2   3.1   3.1   2.1  \n[27]  -0.7  -2.2  -3.0  -6.8  -3.3\n\n\n5.3 Generalize the color mappings\nThe color mapping is currently hard coded (e.g., “2016”, “2017”, etc..) – meaning color is set to a value (in quotes) instead of a variable.  We are going to change this so that the year comes from the column name.  This makes it easier to code the plot in a for loop because we can cycle through the column names using their index values:\n  plot4 = ggplot() +\n    geom_line(mapping=aes(x=1:31, \n                          y=Jan_Avg[,1],  \n                          color=«colnames(Jan_Avg)[1]»)) +\n    geom_line(mapping=aes(x=1:31,  \n                          y=Jan_Avg[,2],  \n                          color=«colnames(Jan_Avg)[2]»)) +\n    geom_line(mapping=aes(x=1:31,\n                          y=Jan_Avg[,3],  \n                          color=«colnames(Jan_Avg)[3]»)) +\n    theme_bw() + \n    labs(x = \"Date\",\n         y = \"Temp (Celsius)\",\n         color = \"Year\");\n  plot(plot4);\nYou can put colnames(Jan_Avg) in the Console to convince yourself that is a vector with 7 value representing the seven column names:\n&gt; colnames(Jan_Avg)\n[1] \"X2016\" \"X2017\" \"X2018\" \"X2019\" \"X2020\" \"X2021\" \"X2022\"\nplot4 will look almost exactly like plot2 (Figure 7) – except the years in the legend are preceded with an X, something we will fix later in the lesson:\n\n\n\n\n\n\nFigure 9: The line plot after generalizing the y and color mappings",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#using-for-loops-and-lazy-evaluations",
+    "href": "lessons/09-ReshapingAndForLoops1.html#using-for-loops-and-lazy-evaluations",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "6 Using for loops and Lazy Evaluations",
+    "text": "6 Using for loops and Lazy Evaluations\nWe have now generalized the script for the geom_line so that it is easier to put in a for loop.  We will now recreate the seven line plots using a for loop.\n \nWe will do this in three steps:\n\nEstablish the ggplot canvas\nAdd plots using a for loop to cycle through the columns\nAdjust the plots with theme and labs (labels)\n\n \nNote: Our first effort to use for loops will fail – in a very instructive way that introduces Lazy Evaluations, a topic that creeps up from time to time\n\n6.1 Establish the ggplot canvas\nggplot() is the function that establishes a ggplot canvas.  Effectively, what ggplot() is doing is creating a List object that holds all the plot data, information, and styling.\n \nWe start with creating a List object with nothing in it (i.e., an empty ggplot() canvas):\nplot6 = ggplot();\nA List object named plot6 has been put into the Environment and now we are going to fill it with plot data.\n\n\n6.2 Adding geoms (line plots) to the canvas\nWe want to create a line plot for all seven column in Jan_Avg.  This means we want to cycle through the seven columns using a for loop:\nfor(i in 1:7)   # cycle through columns 1-7\nAnd each time the for loop cycles we want to append one line plot to the canvas, plot6. \nIn other words, we are adding a year’s line plot to plot6 and saving the results back to plot6:\nplot6 = plot6 +\nWe need to replace the column numbers in the code from the last plot (Figure 14) with the indexing value in the for loop, i, which goes from 1 to 7:\ngeom_line(mapping=aes(x=as.numeric(rownames(Jan_Avg)), \n                      y=Jan_Avg[,«i»],                  # columns 1-7\n                      color=colnames(Jan_Avg)[«i»]));   # names from columns 1-7\nPutting all of this together we get:\n  plot6 = ggplot(); \n  \n  ### Cycle through the seven columns and make a line plot for each \n  for(i in 1:7)   # cycle through columns 1-7\n  {\n    plot6 = plot6 + \n        geom_line(mapping=aes(x=as.numeric(rownames(Jan_Avg)), \n                              y=Jan_Avg[,i], \n                              color=colnames(Jan_Avg)[i])); \n  }\n  plot(plot6);\nAnd the result is something unexpected – we only see a line plot of the last column (2022):\n\n\n\n\n\n\nFigure 10: Only the last column was plotted – this is a case of Lazy Evaluation\n\n\n\n\n\n6.3 Lazy Evaluation \nIt looks as though only the last of the seven columns was plotted once ( Figure 10) but, actually, the last column was plotted seven times.\n \nThis happened because of the way R/GGPlot handles indexes when compiling for loops.  The compilers sees the for loop will executes seven times and stacks up the code from the seven loops like this:\n    plot6 = plot6 + \n        geom_line(mapping=aes(x=as.numeric(rownames(Jan_Avg)), \n                              y=Jan_Avg[,i], \n                              color=colnames(Jan_Avg)[i])); \n    plot6 = plot6 + \n        geom_line(mapping=aes(x=as.numeric(rownames(Jan_Avg)), \n                              y=Jan_Avg[,i], \n                              color=colnames(Jan_Avg)[i])); \n    plot6 = plot6 + \n        geom_line(mapping=aes(x=as.numeric(rownames(Jan_Avg)), \n                              y=Jan_Avg[,i], \n                              color=colnames(Jan_Avg)[i])); \n   ... (4 more) ...\nThen the compiler executed the stacked lines.  The problem is that R evaluated i after the code from the for loops was stacked.\n \nBut, after the for loop,  i is equal to 7.  So, R replace i with 7 in all seven plots in the stack.  This is called Lazy Evaluation.\nLazy Evaluation is one of the more unintuitive problems that happens a lot in programming.",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#local-variables-the-lazy-evaluation-fix",
+    "href": "lessons/09-ReshapingAndForLoops1.html#local-variables-the-lazy-evaluation-fix",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "7 Local variables: The Lazy Evaluation fix",
+    "text": "7 Local variables: The Lazy Evaluation fix\nOne solution to Lazy Evaluation is to force evaluation of i while cycling through the for loop.  This is done using !!().\n  #### Part 7: Stopping the Lazy Evaluation by forcing local variables\n  plot7 = ggplot(); \n  \n  for(i in 1:ncol(Jan_Avg))   # same as 1:7\n  { \n    # force local evaluation of i by replacing i with !!(i)\n    plot7 = plot7 +\n        geom_line(mapping=aes(x=1:31, \n                              y=Jan_Avg[,!!(i)],  \n                              color=colnames(Jan_Avg)[!!(i)]));   \n  }\n  plot(plot7);\nThis forces R to evaluate i each time through the for loop and we see the seven plots:\n\n\n\n\n\n\nFigure 11: Plot of all seven column after we forced local evaluation",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#appending-theme-and-labels",
+    "href": "lessons/09-ReshapingAndForLoops1.html#appending-theme-and-labels",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "8 Appending theme and labels",
+    "text": "8 Appending theme and labels\nOur ggplot canvas, plot7, now has 7 line plots.  Let’s add the theme and labs components but, instead of appending to plot7, we will create a copy of plot7 named plot8 and append the theme and labs components to plot8:\n  plot8 = plot7 +\n    theme_bw() + \n    labs(x = \"Date\",\n         y = \"Temp (Celsius)\",\n         color = \"Year\");\n  plot(plot8);\n\n\n\n\n\n\nFigure 12: The line plots with appended theme and labs",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#aesthetic-changes",
+    "href": "lessons/09-ReshapingAndForLoops1.html#aesthetic-changes",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "9 Aesthetic changes ",
+    "text": "9 Aesthetic changes \nWe are going to make the final plot of this lesson (Figure 12) look a little nicer with the following changes:\n\nremove the X from the year in the legend\nincrease the size of the line\nUse a better color system for the lines\n\n \nThe X can be removed from the column names and the legend using substring with the argument first=2. \n  yearNum = substring(colnames(Jan_Avg), first=2);\nfirst=2 starts with the second character colnames (i.e., removes the first character):\n&gt; yearNum\n[1] \"2016\" \"2017\" \"2018\" \"2019\" \"2020\" \"2021\" \"2022\"\nThe size of the lines can be changed by adding the linewidth subcomponent to geom_line:\n      geom_line(mapping=aes_(x=as.numeric(rownames(Jan_Avg)),  # 1:31\n                             y=Jan_Avg[,i], # plot temperature column i\n                             color=yearNum[i]), \n                linewidth= 1.5); \nAnd we will use the viridis package to give us a better colors.  viridis has many predefined color schemes designed to increase contrast for both discrete and continuous plots.  The schemes can be access using the scale_color_viridis component:\n    scale_color_viridis(discrete = TRUE, # values are discrete (FALSE: continuous)\n                        option = \"H\",    # options are A-H, default is D\n                        direction = 1) + # -1 reverses colors\nPutting it all together:\n yearNum = substring(colnames(Jan_Avg), first=2);  \n  \n  plot9 = ggplot();   # create a new canvas\n  \n  for(i in 1:ncol(Jan_Avg))\n  {\n    plot9 = plot9 +    # append to plot9 the geom_line\n        geom_line(mapping=aes(x=1:31,  \n                              y=Jan_Avg[,!!(i)],\n                              color=yearNum[!!(i)]),  # change to substring\n                  linewidth = 1.5);    # change the size of the line\n  } \n  \n  plot9 = plot9 +    # append these components\n    theme_bw() + \n    scale_color_viridis(discrete = TRUE, # values are discrete (FALSE: continuous)\n                        option = \"H\",    # options are A-H, default is D\n                        direction = 1) + # -1 reverses colors\n    labs(x = \"Date\",\n         y = \"Temp (\\U00B0 C)\",          # use unicode for the degree symbol\n         color = \"Year\");\n  plot(plot9);\nAnd our new plot:\n\n\n\n\n\n\nFigure 13: An improved version of the plot",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#application",
+    "href": "lessons/09-ReshapingAndForLoops1.html#application",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "10 Application",
+    "text": "10 Application\nCreate a script file in your Project’s scripts folder called app09.r and using the data from Jan_TAVG.csv:\n1) In comments at the top of your script answer the following:\n\nWhat happens if you take the year out of quotes in the color mapping in plot2 Figure 7)?  Why? \nWhy does the x mapping (temperature) need to be numeric and the color mapping (year) need to be a string in plot5 (Figure 14)?  How does GGPlot plot these types of values?\n\n \n2) Create a line plot for the first 20 values from years 2017 to 2020 in Jan_TAVG.csv–(4 line plots in all)\n\nDo this once using the reshaping method\n\nYou can subset the data frame in reshape() using the argument drop\n\nAnd a second time using the for loops method\nAdd, and center, a title and subtitle \nChange the background color of the plot and the color of the axis lines to varying shades of gray using grayscale (grey0 to grey100)\n\n \n3) Create a matrix from the data in Jan_TAVG.csv and create a scatterplot of each rows using for loops\n\nuse as.matrix() to convert the data frame into a matrix\nUse a for loops to cycle through, and plot, all the rows (instead of columns)\n\n \nD) &lt;Instructions for GitHub – link to previous lesson&gt;\n\n10.1 Questions\nAnswer the following in comments inside your application script:\n\nWhat was your level of comfort with the lesson/application?\nWhat is a way you can apply the material in this lesson towards your research or area of study?\nWhat are some things you would like to learn related to, but not covered in, this lesson?",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  },
+  {
+    "objectID": "lessons/09-ReshapingAndForLoops1.html#extension-generalize-the-x-mapping",
+    "href": "lessons/09-ReshapingAndForLoops1.html#extension-generalize-the-x-mapping",
+    "title": "09: Reshaping and For Loops 1",
+    "section": "11 Extension: Generalize the x mapping",
+    "text": "11 Extension: Generalize the x mapping\nGeneralizing the x mapping not necessary, but it is good programming practice to generalize your code because it makes your code more flexible and easier to debug.\n \nx maps to the day numbers 1-31, this is the same as the row numbers.  In GGPlot if the rows are not given names then the row numbers are the row names.\n \nWe can see that the row names are the same as the row numbers in the Console:\n&gt; rownames(Jan_Avg)  [1] \"1\"  \"2\"  \"3\"  \"4\"  \"5\"  \"6\"  \"7\"  \"8\"  \"9\"  \"10\" \"11\" \"12\" \"13\" \"14\" \"15\" \"16\" [17] \"17\" \"18\" \"19\" \"20\" \"21\" \"22\" \"23\" \"24\" \"25\" \"26\" \"27\" \"28\" \"29\" \"30\" \"31\"\nThe row names are put in quotes, which means they are characters – not numeric.  We want the x mapping to be continuous so we need numeric values:\n&gt; rownames(Jan_Avg)  [1] \"1\"  \"2\"  \"3\"  \"4\"  \"5\"  \"6\"  \"7\"  \"8\"  \"9\"  \"10\" \"11\" \"12\" \"13\" \"14\" \"15\" \"16\" [17] \"17\" \"18\" \"19\" \"20\" \"21\" \"22\" \"23\" \"24\" \"25\" \"26\" \"27\" \"28\" \"29\" \"30\" \"31\"\nWe will map x to the numeric row names:\n plot5 = ggplot() +     geom_line(mapping=aes(x=«as.numeric(rownames(Jan_Avg))»,  # 1:31                           y=Jan_Avg[,1],    # column 1, also Jan_Avg$X2016                           color=colnames(Jan_Avg)[1])) +     geom_line(mapping=aes(x=«as.numeric(rownames(Jan_Avg))»,  # 1:31                           y=Jan_Avg[,2],    # column 2, also Jan_Avg$X2017                           color=colnames(Jan_Avg)[2])) +     geom_line(mapping=aes(x=«as.numeric(rownames(Jan_Avg))»,  # 1:31                           y=Jan_Avg[,3],    # column 3, also Jan_Avg$X2018                           color=colnames(Jan_Avg)[3])) +     theme_bw() +      labs(x = \"Date\",          y = \"Temp (Celsius)\",          color = \"Year\");   plot(plot5);\n\n\n\n\n\n\nFigure 14: After generalizing the x mapping, we still have the same plot as before",
+    "crumbs": [
+      "Graphing With GGPlot Lessons",
+      "09: Reshaping and For Loops 1"
+    ]
+  }
+]

@@ -1,24 +1,23 @@
-editor: visual
-
 website:  
   bread-crumbs: false
   sidebar:
     search: true
     collapse-level: 1   # does not work because a page within is opened
-    contents: 
-      - section: "Graphing With GGPlot Lessons"  
-        contents: www/*.qmd
+    contents:
+      - section: "Graphing With GGPlot Lessons"
+        contents: lessons/*.qmd
 
 project:
   render:
-  - www/*.qmd
+  - lessons/*.qmd
   type: website
   output-dir: docs
 
 format:
   html:
     page-layout: full
-    css: "https://qfcatmsu.github.io/assets/quarto/qfc_styles.css"
+    css: "qfc_styles.css"
+#    css: "https://qfcatmsu.github.io/assets/quarto/qfc_styles.css"
     toc: true
     toc-title: Lesson Content
     toc-location: left
@@ -32,8 +31,7 @@ format:
       - text: |
           <link rel = "shortcut icon" href = "https://qfcatmsu.github.io/assets/quarto/qfc_icon.png" />
           <script>mod=true; menuCollapse=true;</script>
-          <script src="https://qfcatmsu.github.io/assets/quarto/qfc_styles.js"> 
-      #   <script src="qfc_styles.js"></script> 
+          <script src="qfc_styles.js"></script>      
+ #         <script src="https://qfcatmsu.github.io/assets/quarto/qfc_styles.js"></script>      
 
-          
-          
+editor: visual
